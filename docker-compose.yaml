@@ -1,0 +1,8 @@
+services:
+    account-service:
+    catalog-service:
+
+    order-service:
+
+    graphql-service:
+    
