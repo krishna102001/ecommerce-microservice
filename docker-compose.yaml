@@ -5,4 +5,10 @@ services:
     order-service:
 
     graphql-service:
+
+    account_db: 
+
+    catalog_db:
+
+    order_db:
     
