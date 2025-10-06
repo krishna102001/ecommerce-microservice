@@ -448,7 +448,7 @@ func (x *Order_OrderProduct) GetQuantity() string {
 type PostOrderRequest_OrderProduct struct {
 	state         protoimpl.MessageState `protogen:"open.v1"`
 	ProductId     string                 `protobuf:"bytes,2,opt,name=productId,proto3" json:"productId,omitempty"`
-	Quantity      uint32                 `protobuf:"varint,3,opt,name=quantity,proto3" json:"quantity,omitempty"`
+	Quantity      string                 `protobuf:"bytes,3,opt,name=quantity,proto3" json:"quantity,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -490,11 +490,11 @@ func (x *PostOrderRequest_OrderProduct) GetProductId() string {
 	return ""
 }
 
-func (x *PostOrderRequest_OrderProduct) GetQuantity() uint32 {
+func (x *PostOrderRequest_OrderProduct) GetQuantity() string {
 	if x != nil {
 		return x.Quantity
 	}
-	return 0
+	return ""
 }
 
 var File_order_proto protoreflect.FileDescriptor
@@ -521,7 +521,7 @@ const file_order_proto_rawDesc = "" +
 	"\bproducts\x18\x04 \x03(\v2!.pb.PostOrderRequest.OrderProductR\bproducts\x1aH\n" +
 	"\fOrderProduct\x12\x1c\n" +
 	"\tproductId\x18\x02 \x01(\tR\tproductId\x12\x1a\n" +
-	"\bquantity\x18\x03 \x01(\rR\bquantity\"4\n" +
+	"\bquantity\x18\x03 \x01(\tR\bquantity\"4\n" +
 	"\x11PostOrderResponse\x12\x1f\n" +
 	"\x05order\x18\x01 \x01(\v2\t.pb.OrderR\x05order\"!\n" +
 	"\x0fGetOrderRequest\x12\x0e\n" +
